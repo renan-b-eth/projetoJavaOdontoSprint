@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinistros do Consultório de Dentista</title>
+    <style>
+
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f0f0f0;
+        }
+        .dashboard {
+          max-width: 80%;
+          margin: 40px auto;
+          padding: 20px;
+          background-color: #fff;
+          border: 1px solid #ddd;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+          text-align: center;
+          padding: 10px;
+          background-color: #333;
+          color: #fff;
+          border-bottom: 1px solid #ddd;
+        }
+        .header h2 {
+          margin: 0;
+        }
+        .stats {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+        .stat {
+          flex-basis: 45%;
+          margin: 10px;
+          padding: 10px;
+          background-color: #fff;
+          border: 1px solid #ddd;
+          border-radius: 10px;
+        }
+        .stat h3 {
+          margin: 0;
+          font-weight: bold;
+        }
+        .stat p {
+          margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="dashboard">
+    <div class="header">
+        <h2>Sinistros do Consultório de Dentista</h2>
+    </div>
+    <hr>
+    <h2>Procedimentos Realizados</h2>
+    <ul>
+        <li>
+            <span>Consultas:</span>
+            <span>25</span>
+        </li>
+        <li>
+            <span>Tratamentos de Canal:</span>
+            <span>10</span>
+        </li>
+        <li>
+            <span>Restaurações:</span>
+            <span>15</span>
+        </li>
+        <li>
+            <span>Cirurgias:</span>
+            <span>5</span>
+        </li>
+    </ul>
+    <div class="stats">
+        <div class="stat">
+            <h3>Total de Procedimentos</h3>
+            <p>55</p>
+        </div>
+        <div class="stat">
+            <h3>Média de Procedimentos por Dia</h3>
+            <p>3</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

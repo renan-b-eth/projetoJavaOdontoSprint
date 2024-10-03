@@ -45,6 +45,8 @@ que vai ser direcionado para a tela dashboard do sistema por endpoints que irão
 
 # Link video da Proposta Tecnologica.
 
+https://youtu.be/xMdLX7Lzvy4
+
 # Listagem dos EndPoints da API
 
 

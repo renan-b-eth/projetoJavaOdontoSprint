@@ -38,6 +38,7 @@ que vai ser direcionado para a tela dashboard do sistema por endpoints que irão
 ![image](https://github.com/user-attachments/assets/4d10f4cc-dab3-4915-81aa-466475d52b50)
 
 # imagem dos diagramas
+![diagramaClasse](https://github.com/user-attachments/assets/8e6701e4-2f7f-45b1-a1ce-2b36633b35ca)
 
 # Link video da Proposta Tecnologica.
 

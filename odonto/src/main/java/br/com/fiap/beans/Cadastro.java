@@ -1,5 +1,8 @@
 package br.com.fiap.beans;
 
+import jdk.jfr.DataAmount;
+
+@DataAmount
 public class Cadastro {
     String nome;
     String email;

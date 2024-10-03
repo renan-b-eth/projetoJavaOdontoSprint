@@ -1,5 +1,8 @@
 package br.com.fiap.beans;
 
+import jdk.jfr.DataAmount;
+
+@DataAmount
 public class Login {
 
     String senha;
@@ -23,7 +26,7 @@ public class Login {
     String email;
 
     public void validarLogin(String senha, String nome){
-        
+
     }
 
 }

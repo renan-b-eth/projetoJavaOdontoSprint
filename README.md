@@ -10,12 +10,16 @@ Responsável pelo back-end do sistema.
 # Lucas Alcântara Carvalho - RM 95111
 Responsável pela documentação Trello e MER/DER
 
-#Glenda Delfy Vela Mamani - RM 552667
+# Glenda Delfy Vela Mamani - RM 552667
 Responsável pelo Designer e Prototipo do Sistema.
+
+# Proposta Tecnologica
+![image](https://github.com/user-attachments/assets/4c86428e-2b24-4636-9e0c-842b2a421f59)
+
 
 # instrução de como rodar a aplicação
 
-Você vai precisar baixar o nosso projeto, clonar ele usando o git clone e ter o JDK 18 ou superior na sua Máquina. O projeto é feito em spring initializr por isso já auxilia na compilação do projeto.
+Você vai precisar baixar o nosso projeto, clonar ele usando o git clone e ter o JDK 17 ( esse é o recomendado ) ou superior na sua Máquina. O projeto é feito em spring initializr por isso já auxilia na compilação do projeto.
 Após baixar ti vai abrir o seu inteli ( recomendado usar pois foi feito nele o projeto ) e para rodar o servidor tomcat na sua maquina ti vai precisar ir na pacote br.com.fiap.controller 
 ![image](https://github.com/user-attachments/assets/1875d089-121e-4dd3-b04e-9b4519f79a76)
 e executar com botão direito

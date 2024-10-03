@@ -1,7 +1,10 @@
 # Aplicação Odonto DashBoard Feito por Renan, Lucas e Glenda
 
-#Link da documentação do projeto
+# Link da documentação do projeto
 https://trello.com/b/EUewwjuv/challenge-odontoprev
+
+# Link da Proposta Tecnologica Documento
+https://docs.google.com/document/d/1cgj8YKKfnQ7ZkrNg06J5r1qvo4Qj6evX/edit?usp=sharing&ouid=109153036043701781433&rtpof=true&sd=true
 
 
 # Renan Bezerra dos Santos - RM 553228

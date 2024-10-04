@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <title>Formulário de Login</title>
+    <meta charset="UTF-8">
     <style>
         .container {
             width: 300px;
@@ -62,12 +63,12 @@
 <center><img src="./img/logo.png" alt="LOGO" style="width:100px; height:100px;"></center>
 <div class="container">
     <h1>Login</h1>
-    <form action="/login" method="POST">
+    <form action="/login" th:action="@{/login}" th:object="${Login}" method="POST">
         <label for="usuario" style="color: blue; font-size: 24px;">Usuario:</label>
-        <input type="text" id="usuario" name="usuario" required>
+        <input type="text" id="usuario" th:field="*{email}" name="usuario" required>
 
         <label for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha" required>
+        <input type="password" id="senha" th:field="*{senha}"name="senha" required>
 
         <button type="enviar">Login</button>
         <p>Nao tem uma conta? <a href="./cadastro.html">Cadastre-se</a></p>

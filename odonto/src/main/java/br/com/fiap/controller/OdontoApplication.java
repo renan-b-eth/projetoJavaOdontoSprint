@@ -27,6 +27,7 @@ public class OdontoApplication {
 	public String dizernome(@PathVariable String nome) {
 		return "Olá, meu nome é " + nome;
 	}
+
 	@PostMapping("/cadastrar")
 	public String cadastrar(@Validated @RequestBody Cadastro usuarioDto, BindingResult result) {
 		if (result.hasErrors()) {
@@ -42,23 +43,6 @@ public class OdontoApplication {
 		return "cadastro_sucesso";
 	}
 
-	@PostMapping("/login")
-	public String login(@Validated @RequestBody Login loginDto, BindingResult result) {
-		String emailPadrao = "adm@adm.com", senhaPadrao = "adm";
-		if (result.hasErrors()) {
-			// Retornar para a página de login com os erros
-			return "login";
-		}
-
-		// Validar o usuário e senha (exemplo simplificado)
-		if (emailPadrao.equals(loginDto.getEmail()) || senhaPadrao.equals(loginDto.getSenha())) {
-
-			return "<h1>LOGADO!</h1>";
-		}
-
-		// Se a autenticação for válida, redirecionar para outra página
-		return "DASHBOARD AQUI";
-	}
 
 	// Conexão tipo GET HTTP
 	@RequestMapping("/info")

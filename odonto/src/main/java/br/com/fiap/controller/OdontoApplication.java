@@ -44,15 +44,16 @@ public class OdontoApplication {
 
 	@PostMapping("/login")
 	public String login(@Validated @RequestBody Login loginDto, BindingResult result) {
+		String emailPadrao = "adm@adm.com", senhaPadrao = "adm";
 		if (result.hasErrors()) {
 			// Retornar para a página de login com os erros
 			return "login";
 		}
 
 		// Validar o usuário e senha (exemplo simplificado)
-		if (!"admin".equals(loginDto.getEmail()) || !"password".equals(loginDto.getSenha())) {
-			result.rejectValue("nome", "invlaido", "Invalido email ou senha");
-			return "login";
+		if (emailPadrao.equals(loginDto.getEmail()) || senhaPadrao.equals(loginDto.getSenha())) {
+
+			return "<h1>LOGADO!</h1>";
 		}
 
 		// Se a autenticação for válida, redirecionar para outra página

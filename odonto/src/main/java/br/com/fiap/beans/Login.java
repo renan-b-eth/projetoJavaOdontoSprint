@@ -1,8 +1,10 @@
 package br.com.fiap.beans;
 
 import jdk.jfr.DataAmount;
+import org.springframework.stereotype.Controller;
 
 @DataAmount
+@Controller
 public class Login {
 
     String senha;

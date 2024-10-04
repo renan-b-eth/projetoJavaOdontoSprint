@@ -48,6 +48,11 @@ que vai ser direcionado para a tela dashboard do sistema por endpoints que irão
 https://youtu.be/xMdLX7Lzvy4
 
 # Listagem dos EndPoints da API
+EndPoints GET
+![image](https://github.com/user-attachments/assets/55d3c0cf-0d6a-4b39-a101-d814b91213f8)
+EndPoints POST
+![image](https://github.com/user-attachments/assets/3a6a060d-daf3-49d1-99d7-298890c1d563)
+
 
 
 

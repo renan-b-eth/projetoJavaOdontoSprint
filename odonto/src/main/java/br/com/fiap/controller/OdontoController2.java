@@ -5,6 +5,7 @@ import br.com.fiap.beans.Login;
 import org.springframework.beans.BeanUtils;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,14 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/odonto")
 public class OdontoController2 {
+
+	@Controller
+	public class MeuController {
+		@GetMapping("/logado")
+		public String redirecionar() {
+			return "redirect:/dashboard.html";
+		}
+	}
 
 	@PostMapping("/teste")
 	public ResponseEntity<String> myEndpoint(@RequestBody String request) {
@@ -38,7 +47,7 @@ public class OdontoController2 {
 		usuario.setSenha(usuario.getSenha());
 		usuario.setEmail(usuario.getEmail());
 
-		return "cadastro_sucesso";
+		return "<h1>cadastro_sucesso</h1>";
 	}
 	/*METODO DE LOGIN*/
 	@GetMapping("/login/{email}/{senha}")
@@ -48,14 +57,14 @@ public class OdontoController2 {
 
 		if (emailPadrao.equals(email) && senhaPadrao.equals(senha)) {
 			System.out.println("OPA ENTROU");
-			return "redirect:/http://localhost:8080/dashboard.html";
+			return "redirect:/dashboard.html";
 		}
 
 		/*if (emailPadrao.equals(loginDto.getEmail()) && senhaPadrao.equals(loginDto.getSenha())) {
 			return "redirect:/dashboard.html";
 		}*/
 
-		return "<h1>LOGIN ERRADO</h1>";
+		return "<h1 style='color:red;'>LOGIN ERRADO</h1>";
 	}
 	@PostMapping("/login/{email}/{senha}")
 	public String login(@Validated @RequestBody Login loginDto, @PathVariable String email, @PathVariable String senha, BindingResult result) {

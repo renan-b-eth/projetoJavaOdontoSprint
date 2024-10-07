@@ -51,6 +51,15 @@ https://youtu.be/xMdLX7Lzvy4
 # Listagem dos EndPoints da API
 EndPoints GET
 ![image](https://github.com/user-attachments/assets/55d3c0cf-0d6a-4b39-a101-d814b91213f8)
+Caso de sucesso de login
+odonto/login/{email}/{senha}
+![image](https://github.com/user-attachments/assets/07134912-2533-45ab-8701-17036f5bbb80)
+só funciona por endpoint ( login = adm, senha = adm )
+
+caso de erro
+![image](https://github.com/user-attachments/assets/2f13afcb-607c-4d5e-a406-1738ba5a2fb9)
+
+
 EndPoints POST
 ![image](https://github.com/user-attachments/assets/3a6a060d-daf3-49d1-99d7-298890c1d563)
 

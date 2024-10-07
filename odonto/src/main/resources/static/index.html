@@ -63,7 +63,7 @@
 <center><img src="./img/logo.png" alt="LOGO" style="width:100px; height:100px;"></center>
 <div class="container">
     <h1>Login</h1>
-    <form action="/login" th:action="@{/login}" th:object="${Login}" method="POST">
+    <form action="/odonto/login" th:action="@{/odonto/login}" th:object="${Login}" method="POST">
         <label for="usuario" style="color: blue; font-size: 24px;">Usuario:</label>
         <input type="text" id="usuario" th:field="*{email}" name="usuario" required>
 

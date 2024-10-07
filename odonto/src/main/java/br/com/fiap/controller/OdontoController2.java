@@ -40,20 +40,22 @@ public class OdontoController2 {
 
 		return "cadastro_sucesso";
 	}
-	@GetMapping("/login")
-	public String login(@Validated @RequestBody String email, String senha) {
+	/*METODO DE LOGIN*/
+	@GetMapping("/login/{email}/{senha}")
+	public String login(@Validated @PathVariable String email, @PathVariable String senha) {
 		String emailPadrao = "adm", senhaPadrao = "adm";
 		System.out.println(emailPadrao);
 
 		if (emailPadrao.equals(email) && senhaPadrao.equals(senha)) {
-			return "redirect:/dashboard.html";
+			System.out.println("OPA ENTROU");
+			return "redirect:/http://localhost:8080/dashboard.html";
 		}
 
 		/*if (emailPadrao.equals(loginDto.getEmail()) && senhaPadrao.equals(loginDto.getSenha())) {
 			return "redirect:/dashboard.html";
 		}*/
 
-		return "<h1>LOGIN FEITO</h1>";
+		return "<h1>LOGIN ERRADO</h1>";
 	}
 	@PostMapping("/login/{email}/{senha}")
 	public String login(@Validated @RequestBody Login loginDto, @PathVariable String email, @PathVariable String senha, BindingResult result) {

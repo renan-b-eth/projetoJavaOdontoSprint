@@ -1,26 +1,22 @@
 # Aplicação Odonto DashBoard Feito por Renan, Lucas e Glenda
 
-# Link da documentação do projeto
+# Link Backlog do Projeto
 https://trello.com/b/EUewwjuv/challenge-odontoprev
 
-# Link da Proposta Tecnologica Documento
-https://docs.google.com/document/d/1cgj8YKKfnQ7ZkrNg06J5r1qvo4Qj6evX/edit?usp=sharing&ouid=109153036043701781433&rtpof=true&sd=true
-
-
-# Renan Bezerra dos Santos - RM 553228
+- Renan Bezerra dos Santos - RM 553228
 Responsável pelo back-end do sistema.
 
-# Lucas Alcântara Carvalho - RM 95111
+- Lucas Alcântara Carvalho - RM 95111
 Responsável pela documentação Trello e MER/DER
 
-# Glenda Delfy Vela Mamani - RM 552667
+- Glenda Delfy Vela Mamani - RM 552667
 Responsável pelo Designer e Prototipo do Sistema.
 
 # Proposta Tecnologica
 ![image](https://github.com/user-attachments/assets/4c86428e-2b24-4636-9e0c-842b2a421f59)
 
 
-# instrução de como rodar a aplicação
+# Instruções de Execução da Aplicação
 
 Você vai precisar baixar o nosso projeto, clonar ele usando o git clone e ter o JDK 17 ![image](https://github.com/user-attachments/assets/0e99c0c5-e5f1-490f-9f9f-746af3cf230b)
 ( esse é o recomendado ) ou superior na sua Máquina. O projeto é feito em spring initializr por isso já auxilia na compilação do projeto.
@@ -45,7 +41,6 @@ que vai ser direcionado para a tela dashboard do sistema por endpoints que irão
 ![diagramaClasse](https://github.com/user-attachments/assets/8e6701e4-2f7f-45b1-a1ce-2b36633b35ca)
 
 # Link video da Proposta Tecnologica.
-
 https://youtu.be/xMdLX7Lzvy4
 
 # Listagem dos EndPoints da API
@@ -56,7 +51,7 @@ odonto/login/{email}/{senha}
 ![image](https://github.com/user-attachments/assets/07134912-2533-45ab-8701-17036f5bbb80)
 só funciona por endpoint ( login = adm, senha = adm )
 
-caso de erro
+Casos de Erro
 ![image](https://github.com/user-attachments/assets/2f13afcb-607c-4d5e-a406-1738ba5a2fb9)
 
 

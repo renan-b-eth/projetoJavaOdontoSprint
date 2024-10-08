@@ -9,9 +9,6 @@ Responsável pela documentação Trello e MER/DER
 - Renan Bezerra dos Santos - RM 553228 -
 Responsável pelo back-end do sistema.
 
-# Link Backlog do Projeto
-https://trello.com/b/EUewwjuv/challenge-odontoprev
-
 # Proposta Tecnologica
 ![image](https://github.com/user-attachments/assets/4c86428e-2b24-4636-9e0c-842b2a421f59)
 

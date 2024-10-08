@@ -1,4 +1,4 @@
-# Aplicação Odonto DashBoard Feito por Renan, Lucas e Glenda
+# Aplicação Odonto DashBoard
 
 # Link Backlog do Projeto
 https://trello.com/b/EUewwjuv/challenge-odontoprev

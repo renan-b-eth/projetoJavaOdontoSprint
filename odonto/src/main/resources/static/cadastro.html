@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Formulario de Cadastro</title>
+    <title>Formulario de Cadastro De Clinica</title>
     <style>
         .container {
             width: 300px;
@@ -58,25 +58,23 @@
     </style>
 </head>
 <body>
-<center><img src="./img/logo.png" alt="LOGO" style="width:100px; height:100px;"></center>
+<center><img src="./img/logoodonto.png" alt="LOGO" style="width:200px; height:200px;"></center>
 <div class="container">
 
-    <h1>Cadastro</h1>
+    <h1>Cadastro de Consultorio</h1>
 
     <form th:action="@{/cadastrar}" th:object="${usuarioDto}" method="POST">
+
+        <label for="nomeclinica">Nome
+            do Consultorio:</label>
+        <input type="text" id="nomeclinica" name="nomeclinica" th:field="*{nomeConsultorio}" required>
+        
         <label for="email" >Email:</label>
         <input type="email" id="email" name="email" th:field="*{email}" required>
 
         <label for="senha">Senha:</label>
         <input type="password" id="senha"
                name="senha" th:field="*{senha}" required>
-
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" th:field="*{nome}" required>
-
-        <label for="nomeclinica">Nome
-            do Consultorio:</label>
-        <input type="text" id="nomeclinica" name="nomeclinica" th:field="*{nomeConsultorio}" required>
 
         <button type="enviar">Cadastrar</button>
         <p>Ja tem uma conta? <a href="./index.html">Faca login</a></p>

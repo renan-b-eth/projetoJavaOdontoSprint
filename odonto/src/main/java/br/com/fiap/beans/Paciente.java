@@ -1,8 +1,19 @@
 package br.com.fiap.beans;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.util.Date;
 
+@Entity
 public class Paciente {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     int idPaciente, idPlano, idEndereco;
     String nome;
 
@@ -22,7 +33,7 @@ public class Paciente {
         this.idPlano = idPlano;
     }
 
-    public int getIdEndereco() {
+    public long getIdEndereco() {
         return idEndereco;
     }
 

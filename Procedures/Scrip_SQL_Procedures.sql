@@ -56,3 +56,74 @@ CREATE OR REPLACE PROCEDURE deletar_paciente (
 BEGIN
     DELETE FROM ODONTO_PACIENTE WHERE ID_PACIENTE = p_id_paciente;
 END deletar_paciente;
+
+
+CREATE OR REPLACE PROCEDURE inserir_consultorio (
+    p_nome_clinica VARCHAR2,
+    p_tipo_atendimento VARCHAR2,
+    p_id_endereco NUMERIC
+) IS
+BEGIN
+    -- Validações
+    IF LENGTH(p_nome_clinica) = 0 THEN
+        RAISE_APPLICATION_ERROR(-20003, 'O nome da clínica é obrigatório.');
+    END IF;
+
+    INSERT INTO ODONTO_CLINICA (
+        NOME_CLINICA, TIPO_ATENDIMENTO, ID_ENDERECO
+    ) VALUES (
+        p_nome_clinica, p_tipo_atendimento, p_id_endereco
+    );
+EXCEPTION
+    WHEN OTHERS THEN
+        RAISE_APPLICATION_ERROR(-20002, 'Erro ao inserir consultório: ' || SQLERRM);
+END inserir_consultorio;
+
+CREATE OR REPLACE PROCEDURE atualizar_consultorio (
+    p_id_clinica NUMERIC,
+    p_nome_clinica VARCHAR2,
+    p_tipo_atendimento VARCHAR2,
+    p_id_endereco NUMERIC
+) IS
+BEGIN
+    UPDATE ODONTO_CLINICA
+    SET
+        NOME_CLINICA = p_nome_clinica,
+        TIPO_ATENDIMENTO = p_tipo_atendimento,
+        ID_ENDERECO = p_id_endereco
+    WHERE ID_CLINICA = p_id_clinica;
+
+    IF SQL%ROWCOUNT = 0 THEN
+        RAISE_APPLICATION_ERROR(-20006, 'Consultório não encontrado.');
+    END IF;
+EXCEPTION
+    WHEN OTHERS THEN
+        RAISE_APPLICATION_ERROR(-20007, 'Erro ao atualizar consultório: ' || SQLERRM);
+END atualizar_consultorio;
+
+CREATE OR REPLACE FUNCTION validar_consultorio (
+    p_nome_clinica VARCHAR2,
+    p_tipo_atendimento VARCHAR2,
+    p_id_endereco NUMERIC
+) RETURN BOOLEAN IS
+    v_count NUMBER;
+BEGIN
+    -- Verifica se já existe um consultório com o mesmo nome e endereço
+    SELECT COUNT(*) INTO v_count
+    FROM ODONTO_CLINICA
+    WHERE NOME_CLINICA = p_nome_clinica
+    AND ID_ENDERECO = p_id_endereco;
+    
+    IF v_count > 0 THEN
+        RETURN FALSE;
+    END IF;
+    
+    RETURN TRUE;
+END validar_consultorio;
+
+-- Executar
+
+SQL> EXECUTE inserir_consultorio('Clínica Sorriso', 'Odontologia Geral', 123);
+
+SQL> EXECUTE atualizar_consultorio(1, 'Clínica Sorriso Renovada', 'Odontologia Estética', 456);
+

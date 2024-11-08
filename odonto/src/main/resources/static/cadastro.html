@@ -63,7 +63,7 @@
 
     <h1>Cadastro de Consultorio</h1>
 
-    <form th:action="@{/cadastrar323242}" th:object="${consultorioDto}" method="GET">
+    <form th:action="@{/cadastrar}" th:object="${consultorioDto}" method="POST">
 
         <label for="id">ID:</label>
         <input type="text" id="id" name="id" th:field="*{id}" required>

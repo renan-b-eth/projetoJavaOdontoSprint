@@ -10,7 +10,7 @@ public class ConsultorioService {
     private JdbcTemplate jdbcTemplate;
 
     public void cadastrarConsultorio(CadastroConsultorio consultorioDto) {
-        jdbcTemplate.update("CALL cadastrar_clinica(?, ?, ?, ?)",
+        jdbcTemplate.update("CALL INSERIR_ODONTO_CLINICA(?, ?, ?, ?)",
                 consultorioDto.getId(),consultorioDto.getNome(), consultorioDto.getEmail(), consultorioDto.getSenha());
     }
 }

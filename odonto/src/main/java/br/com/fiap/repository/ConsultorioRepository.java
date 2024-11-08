@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ConsultorioRepository extends JpaRepository<CadastroConsultorio, Long> {
-    @Query(value = "CALL cadastrar_clinica(:ID_CADASTROCLINICA, :nome, :email, :senha)", nativeQuery = true)
+    @Query(value = "CALL INSERIR_ODONTO_CLINICA(:ID_CADASTROCLINICA, :nome, :email, :senha)", nativeQuery = true)
     void cadastrarUsuario(@Param("ID_CADASTROCLINICA") int ID_CADASTROCLINICA, @Param("nome") String nome, @Param("email") String email, @Param("senha") String senha);
 
 }

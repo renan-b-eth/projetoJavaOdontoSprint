@@ -22,6 +22,6 @@ public class ConsultorioController2 {
     cadastrarUsuario(@RequestBody CadastroConsultorio consultorio) {
         CadastroConsultorio consultorioSalvo = consultorioRepository.save(consultorio);
 
-        return ResponseEntity.created(URI.create("/usuarios/" + consultorioSalvo.getId())).body(consultorioSalvo);
+        return ResponseEntity.created(URI.create("/clinicas/" + consultorioSalvo.getId())).body(consultorioSalvo);
     }
 }

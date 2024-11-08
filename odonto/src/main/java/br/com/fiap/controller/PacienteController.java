@@ -45,7 +45,7 @@ public class PacienteController {
         }
     }
 
-    @PostMapping("/cadastrar")
+    @PostMapping("/cadastrarpaciente")
     public String cadastrarPaciente(@ModelAttribute Paciente paciente) {
         try {
             ResponseEntity<String> response = restTemplate.postForEntity(

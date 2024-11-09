@@ -16,16 +16,16 @@ public class PacienteService {
 
 
     public void atualizarPaciente(Long idPaciente, String nome, Date dataNascimento, String sexo, String cpf, String email, String telefone, Long idEndereco) {
-        jdbcTemplate.update("call atualizar_paciente(?, ?, ?, ?, ?, ?, ?, ?)",
+        jdbcTemplate.update("call ATUALIZAR_ODONTO_PACIENTE(?, ?, ?, ?, ?, ?, ?, ?)",
                 idPaciente, nome, dataNascimento, sexo, cpf, email, telefone, idEndereco);
     }
 
     public void deletarPaciente(Long idPaciente) {
-        jdbcTemplate.update("call deletar_paciente(?)", idPaciente);
+        jdbcTemplate.update("call DELETAR_ODONTO_PACIENTE(?)", idPaciente);
     }
 
     public void cadastrarPaciente(Paciente pacienteDTO) {
-        jdbcTemplate.update("call inserir_paciente(?, ?, ?, ?, ?, ?)",
+        jdbcTemplate.update("call INSERIR_ODONTO_PACIENTE(?, ?, ?, ?, ?, ?)",
                 pacienteDTO.getNome(),
                 pacienteDTO.getDataNascimento(),
                 pacienteDTO.getSexo(),

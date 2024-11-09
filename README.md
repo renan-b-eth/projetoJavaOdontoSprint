@@ -9,6 +9,15 @@ Responsável pela documentação Trello e MER/DER
 - Renan Bezerra dos Santos - RM 553228 -
 Responsável pelo back-end do sistema.
 
+
+# Prioridade executar o .sql antes de buildar o sistema
+![image](https://github.com/user-attachments/assets/102fe1be-62ef-4b70-b48e-dcfa4d87c868)
+
+Alguns endpoints não pode estar funcionando, mas o código foi feito baseado em controller, repository, service e com endpoints corretos
+![image](https://github.com/user-attachments/assets/82d0f2c0-8af0-45e7-a1a3-29dfec1f268f)
+
+
+
 # Proposta Tecnologica
 ![image](https://github.com/user-attachments/assets/4c86428e-2b24-4636-9e0c-842b2a421f59)
 
@@ -24,11 +33,18 @@ e executar com botão direito
 
 e vai para a seguinte tela que é a nossa index
 
-![image](https://github.com/user-attachments/assets/dbeba6c7-76be-46ac-b2ad-f3ba08553610)
+![image](https://github.com/user-attachments/assets/a4d27fb6-7388-41b1-8d0f-861e87e14238)
 
-tendo também a de cadastro
 
-![image](https://github.com/user-attachments/assets/dbe6891b-a2c5-4338-a391-5d9054e211be)
+# cadastro de clinica
+
+![image](https://github.com/user-attachments/assets/fcdabbdb-3e2d-41c4-a385-25a96cc608c1)
+
+# cadastro de paciente
+
+![image](https://github.com/user-attachments/assets/b8560836-1cf1-47d3-99ff-86ee6754e743)
+
+
 
 que vai ser direcionado para a tela dashboard do sistema por endpoints que irão fazer parte da api restful e jpa.
 
@@ -53,6 +69,10 @@ só funciona por endpoint ( login = adm, senha = adm )
 
 # EndPoints POST
 ![image](https://github.com/user-attachments/assets/3a6a060d-daf3-49d1-99d7-298890c1d563)
+
+# Endpoints Novos
+![image](https://github.com/user-attachments/assets/aee2421b-c002-4f2c-8b16-72979c0caabc)
+
 
 # Video Proposta Tecnologica.
 https://youtu.be/xMdLX7Lzvy4

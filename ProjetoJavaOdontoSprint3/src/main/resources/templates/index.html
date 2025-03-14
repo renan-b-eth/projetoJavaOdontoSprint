@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Formulário de Login</title>
+    <meta charset="UTF-8">
+    <style>
+        .container {
+            width: 300px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin-bottom: 10px;
+        }
+
+        input[type="text"], input[type="password"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus {
+            border-color: #aaa;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button[type="enviar"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button[type="enviar"]:hover {
+            background-color: #3e8e41;
+        }
+
+        /* Style the link */
+        a {
+            text-decoration: none;
+            color: #337ab7;
+        }
+
+        a:hover {
+            color: #23527c;
+        }
+    </style>
+</head>
+<body>
+<center><img src="./img/logoodonto.png" alt="LOGO" style="width:200px; height:200px;"></center>
+<div class="container">
+    <h1>Login</h1>
+    <form action="/odonto/login" th:action="@{/odonto/login}" th:object="${Login}" method="GET">
+        <label for="usuario" style="color: blue; font-size: 24px;">Usuario:</label>
+        <input type="text" id="usuario" th:field="*{email}" name="usuario" required>
+
+        <label for="senha" style="color: blue; font-size: 24px;">Senha:</label>
+        <input type="password" id="senha" th:field="*{senha}"name="senha" required>
+
+        <button type="enviar">Login</button>
+        <p>Nao tem uma conta? <a href="./cadastro.html">Cadastro da Clinica</a></p>
+        <p>Nao tem uma conta? <a href="./cadastroPaciente.html">Cadastro de Paciente</a></p>
+    </form>
+</div>
+</body>
+</html>

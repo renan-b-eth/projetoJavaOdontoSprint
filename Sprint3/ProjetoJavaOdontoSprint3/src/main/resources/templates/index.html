@@ -1,10 +1,163 @@
 <!DOCTYPE html>
-<html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="pt-BR">
 <head>
-    <title>Formulário de Login</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login OdontoPrev</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('imagem-do-fundo.gif') no-repeat center center fixed;
+            background-size: cover;
+            animation: fadeIn 2s;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            animation: bounceIn 1s;
+        }
+
+        h1 {
+            animation: fadeInDown 1s;
+        }
+
+        input {
+            margin: 10px 0;
+            padding: 10px;
+            width: calc(100% - 20px);
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            background: green;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: darkgreen;
+        }
+        body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f4f8; /* Cor de fundo suave */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .container {
+        background-color: white; /* Fundo branco do formulário */
+        border-radius: 8px; /* Cantos arredondados */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        padding: 30px; /* Espaçamento interno */
+        width: 300px; /* Largura do formulário */
+        text-align: center; /* Centralizar o texto */
+    }
+
+    h2 {
+        margin-bottom: 20px; /* Espaçamento abaixo do título */
+        color: #2c3e50; /* Cor do texto do título */
+    }
+
+    label {
+        display: block; /* Exibir como bloco para ocupar linha inteira */
+        margin: 10px 0 5px; /* Margem vertical para os rótulos */
+        color: #34495e; /* Cor do texto dos rótulos */
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%; /* Ajustar a largura para 100% */
+        padding: 10px; /* Espaçamento interno */
+        border: 1px solid #bdc3c7; /* Borda leve */
+        border-radius: 4px; /* Cantos arredondados */
+        box-sizing: border-box; /* Para incluir padding na largura total */
+    }
+
+    input[type="submit"] {
+        background-color: #2ecc71; /* Cor verde para o botão */
+        color: white; /* Texto branco no botão */
+        border: none; /* Sem borda */
+        padding: 10px; /* Espaçamento interno */
+        border-radius: 4px; /* Cantos arredondados */
+        cursor: pointer; /* Mudar o cursor ao passar o mouse */
+        transition: background-color 0.3s; /* Transição suave */
+    }
+
+    input[type="submit"]:hover {
+        background-color: #27ae60; /* Cor do botão ao passar o mouse */
+    }
+
+    a {
+        display: block; /* Exibir como bloco para preencher linha */
+        margin: 5px 0; /* Margem vertical */
+        color: #2980b9; /* Cor azul para links */
+        text-decoration: none; /* Remover sublinhado */
+    }
+
+    a:hover {
+        text-decoration: underline; /* Sublinhado ao passar o mouse */
+    }
+    </style>
 </head>
 <body>
-        <h1>HELLO WORLD</h1>
+
+<div class="container">
+
+    <div style="text-align: center;">
+        <img src="logo.png" alt="logo" style="max-width: 100%; height: auto;">
+    </div>
+
+    <h1>Login</h1>
+    <label for="usuario">Usuário:</label>
+    <input type="text" id="usuario" name="usuario">
+
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha">
+
+    <button>Login</button>
+    <p>Não tem uma conta? <a th:href="@{/cadastroConsultorio.html}">Cadastro da Clínica</a></p>
+    <p>Não tem uma conta? <a href="#">Cadastro de Paciente</a></p>
+</div>
+<script src="script.js"></script>
+
+<form th:action="@{/inserir-dentista}" method="post" th:object="${dentista}">
+    <div>
+        <label>Nome:</label>
+        <input type="text" th:field="*{nome}" />
+    </div>
+    <div>
+        <label>Especialidade:</label>
+        <input type="text" th:field="*{especialidade}" />
+    </div>
+    <div>
+        <label>CRO:</label>
+        <input type="text" th:field="*{cro}" />
+    </div>
+    <div>
+        <label>Taxa Sinistros:</label>
+        <input type="number" th:field="*{taxaSinistros}" />
+    </div>
+    <div>
+        <label>ID Endereço:</label>
+        <input type="number" th:field="*{idEndereco}" />
+    </div>
+    <button type="submit">Salvar</button>
+</form>
 </body>
 </html>

@@ -1,33 +1,24 @@
 package br.com.fiap.beans;
 
+import jakarta.persistence.Id;
+
+import java.math.BigDecimal;
+
 public class Dentista {
-    int id;
-    int anosExperiencia;
-    int taxasSinistro;
-    String nome, especialidade, cro;
+    @Id
+    private Long idDentista;
+    private String nome;
+    private String especialidade;
+    private String cro;
+    private BigDecimal taxaSinistros;
+    private Long idEndereco;
 
-    public int getId() {
-        return id;
+    public Long getIdDentista() {
+        return idDentista;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getAnosExperiencia() {
-        return anosExperiencia;
-    }
-
-    public void setAnosExperiencia(int anosExperiencia) {
-        this.anosExperiencia = anosExperiencia;
-    }
-
-    public int getTaxasSinistro() {
-        return taxasSinistro;
-    }
-
-    public void setTaxasSinistro(int taxasSinistro) {
-        this.taxasSinistro = taxasSinistro;
+    public void setIdDentista(Long idDentista) {
+        this.idDentista = idDentista;
     }
 
     public String getNome() {
@@ -54,4 +45,19 @@ public class Dentista {
         this.cro = cro;
     }
 
+    public BigDecimal getTaxaSinistros() {
+        return taxaSinistros;
+    }
+
+    public void setTaxaSinistros(BigDecimal taxaSinistros) {
+        this.taxaSinistros = taxaSinistros;
+    }
+
+    public Long getIdEndereco() {
+        return idEndereco;
+    }
+
+    public void setIdEndereco(Long idEndereco) {
+        this.idEndereco = idEndereco;
+    }
 }

@@ -111,6 +111,12 @@
 			<artifactId>ojdbc11</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.example</groupId>
+			<artifactId>ProjetoJavaOdontoSrpint3</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
 
 	</dependencies>
 

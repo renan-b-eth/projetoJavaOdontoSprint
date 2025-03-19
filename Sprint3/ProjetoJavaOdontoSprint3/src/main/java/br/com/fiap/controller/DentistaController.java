@@ -36,5 +36,10 @@ public class DentistaController {
         return "redirect:/lista-dentistas";
     }
 
+    @GetMapping("/nova-pagina")
+    public String mostrarNovaPagina() {
+        return "nova-pagina5587899";
+    }
+
 
 }

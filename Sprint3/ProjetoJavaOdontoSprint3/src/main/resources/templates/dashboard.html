@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            background-color: #2b99ff;
+            color: white;
+            padding: 10px 0;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+        .procedimentos {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+        .resultado {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .resultado div {
+            background-color: #eaeaea;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 48%;
+        }
+        .fonte{
+            font-size: 25px;
+        }
+        img {
+            max-width: 100%; /* para ajustar a imagem ao tamanho do contêiner */
+            height: auto; /* para manter a proporção da imagem */
+            width: 200px;
+        }
+        .center{
+            position: relative;
+            right: -43%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sinistros do Consultório de Dentista</h1>
+
+    <div class="procedimentos">
+        <h2>Procedimentos Realizados</h2>
+        <ul>
+            <li class="fonte">Consultas: 25</li>
+            <li class="fonte">Tratamentos de Canal: 10</li>
+            <li class="fonte">Restaurações: 15</li>
+            <li class="fonte">Cirurgias: 5</li>
+        </ul>
+        
+        <div class="resultado">
+            <div>
+                <strong>Total de Procedimentos</strong>
+                <p class="fonte">55</p>
+            </div>
+            <div>
+                <strong>Média de Procedimentos por Dia</strong>
+                <p >3</p>
+            </div>
+        </div>
+    </div>
+    <img class="center" src="logo.png" alt="">
+
+</body>
+</html>

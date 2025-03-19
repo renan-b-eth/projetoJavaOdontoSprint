@@ -4,6 +4,7 @@ import br.com.fiap.beans.CadastroConsultorio;
 import br.com.fiap.service.ConsultorioService;
 import br.com.fiap.service.PacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -16,5 +17,15 @@ public class ConsultorioController {
         consultorioService.cadastrarConsultorio(consultorioDto);
         // Redirecionar para uma página de sucesso ou mostrar uma mensagem de sucesso
         return "redirect:/sucesso";
+    }
+
+    @PostMapping("/cadastro-consultorio")
+    public String cadastrarConsultorio() {
+        return "redirect:/form-consultorio";
+    }
+
+    @GetMapping("/form-consultorio")
+    public String mostrarFormulario() {
+        return "form-consultorio";
     }
 }

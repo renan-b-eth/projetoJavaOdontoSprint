@@ -35,4 +35,6 @@ public class DentistaController {
         service.inserirDentista(dentista);
         return "redirect:/lista-dentistas";
     }
+
+
 }

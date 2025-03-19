@@ -16,7 +16,95 @@
             background-size: cover;
             animation: fadeIn 2s;
         }
-
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        label {
+            margin-bottom: 5px;
+            display: block;
+        }
+        .register-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #000;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="password"], input[type="date"], input[type="email"], input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .links {
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+        .links a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .link-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .link-container a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .link-container a:hover {
+            text-decoration: underline;
+        }
         .container {
             background: rgba(255, 255, 255, 0.8);
             padding: 20px;
@@ -135,29 +223,89 @@
     <p>Não tem uma conta? <a href="#">Cadastro de Paciente</a></p>
 </div>
 <script src="script.js"></script>
+<div class="form-container">
+    <h2>Cadastro de Dentista</h2>
+    <form action="/inserir-dentista" method="post">
+        <div>
+            <label>ID:</label>
+            <input type="text" name="idDentista" />
+        </div>
+        <div>
+            <label>Nome:</label>
+            <input type="text" name="nome" />
+        </div>
+        <div>
+            <label>Especialidade:</label>
+            <input type="text" name="especialidade" />
+        </div>
+        <div>
+            <label>CRO:</label>
+            <input type="text" name="cro" />
+        </div>
+        <div>
+            <label>Taxa Sinistros:</label>
+            <input type="number" name="taxaSinistros" />
+        </div>
+        <div>
+            <label>ID Endereço:</label>
+            <input type="number" name="idEndereco" />
+        </div>
+        <button type="submit">Salvar</button>
+    </form>
+    <div class="link-container">
+        <a href="#">Voltar ao Login</a>
+    </div>
+</div>
+<div class="register-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Heart_icon.svg/1024px-Heart_icon.svg.png" alt="Logo OdontoPrev" style="width: 150px;">
+    <h1>Cadastro de Paciente</h1>
+    <form action="#" method="post">
+        <label for="idPaciente">ID Paciente:</label>
+        <input type="text" id="idPaciente" name="idPaciente" required>
 
-<form th:action="@{/inserir-dentista}" method="post" th:object="${dentista}">
-    <div>
-        <label>Nome:</label>
-        <input type="text" th:field="*{nome}" />
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="data">Data de Nascimento:</label>
+        <input type="date" id="data" name="data" required>
+
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo" required>
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outro">Outro</option>
+        </select>
+
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required>
+
+        <label for="historialOdontologico">Histórico Odontológico:</label>
+        <input type="text" id="historialOdontologico" name="historialOdontologico" required>
+
+        <label for="frequenciaConsultas">Frequência de Consultas:</label>
+        <input type="text" id="frequenciaConsultas" name="frequenciaConsultas" required>
+
+        <label for="idEndereco">ID Endereço:</label>
+        <input type="text" id="idEndereco" name="idEndereco" required>
+
+        <label for="idPlano">ID Plano:</label>
+        <input type="text" id="idPlano" name="idPlano" required>
+
+        <input type="submit" value="Cadastrar">
+    </form>
+    <div class="links">
+        <p>Já tem uma conta? <a href="#">Login</a></p>
+        <p>Não tem uma conta? <a href="#">Cadastro da Clínica</a></p>
     </div>
-    <div>
-        <label>Especialidade:</label>
-        <input type="text" th:field="*{especialidade}" />
-    </div>
-    <div>
-        <label>CRO:</label>
-        <input type="text" th:field="*{cro}" />
-    </div>
-    <div>
-        <label>Taxa Sinistros:</label>
-        <input type="number" th:field="*{taxaSinistros}" />
-    </div>
-    <div>
-        <label>ID Endereço:</label>
-        <input type="number" th:field="*{idEndereco}" />
-    </div>
-    <button type="submit">Salvar</button>
+</div>
+<form th:action="@{/cadastro-consultorio}" method="post">
+    <button type="submit">Cadastrar Consultório</button>
 </form>
 </body>
 </html>

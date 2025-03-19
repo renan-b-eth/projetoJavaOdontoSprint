@@ -27,4 +27,14 @@ public class ConsultorioController2 {
     public String mostrarNovaPagina() {
         return "cadastroConsultorio.html";
     }
+
+    @PostMapping("/cadastro-consultorio")
+    public String cadastrarConsultorio() {
+        return "redirect:/form-consultorio";
+    }
+
+    @GetMapping("/form-consultorio")
+    public String mostrarFormulario() {
+        return "form-consultorio";
+    }
 }

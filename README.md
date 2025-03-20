@@ -51,7 +51,10 @@ e vai para a seguinte tela que é a nossa index
 # cadastro dentista
 ![image](https://github.com/user-attachments/assets/25a931a9-61fc-4bff-96db-721ebf300f6d)
 
-# novo cadastro clinica ![image](https://github.com/user-attachments/assets/8c96dd3e-b9b4-4b43-b75e-a4b19ef95f9f)
+# novo cadastro clinica 
+![image](https://github.com/user-attachments/assets/8c96dd3e-b9b4-4b43-b75e-a4b19ef95f9f)
+![image](https://github.com/user-attachments/assets/4ab65995-2865-427f-b56d-030bf69901f3)
+
 
 
 

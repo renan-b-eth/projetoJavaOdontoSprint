@@ -27,13 +27,16 @@ Você vai precisar baixar o nosso projeto, clonar ele usando o git clone e ter o
 ![image](https://github.com/user-attachments/assets/0e99c0c5-e5f1-490f-9f9f-746af3cf230b)  
 (esse é o recomendado) ou superior na sua Máquina. O projeto é feito em spring initializr por isso já auxilia na compilação do projeto.
 Após baixar abrir o inteliJ (recomendado usar pois foi feito nele o projeto) e para rodar o servidor tomcat na sua maquina você ira precisar ir até o pacote br.com.fiap.controller 
-![image](https://github.com/user-attachments/assets/1875d089-121e-4dd3-b04e-9b4519f79a76)  
+![image](https://github.com/user-attachments/assets/e7bc3193-fc0a-4d09-9ea3-89c54409e3ad)
+
 e executar com botão direito
-![image](https://github.com/user-attachments/assets/2b74ae4f-2c7b-4cb7-8ebd-e2b4b0c72ab6)
+![image](https://github.com/user-attachments/assets/44f835e0-0fe7-4569-b7a0-c91aea75a85d)
+
 
 e vai para a seguinte tela que é a nossa index
 
-![image](https://github.com/user-attachments/assets/a4d27fb6-7388-41b1-8d0f-861e87e14238)
+![image](https://github.com/user-attachments/assets/f0f3e464-cb15-41e1-ab17-1d913ac010a2)
+
 
 
 # cadastro de clinica
@@ -43,6 +46,13 @@ e vai para a seguinte tela que é a nossa index
 # cadastro de paciente
 
 ![image](https://github.com/user-attachments/assets/b8560836-1cf1-47d3-99ff-86ee6754e743)
+
+# cadastro dentista
+![image](https://github.com/user-attachments/assets/25a931a9-61fc-4bff-96db-721ebf300f6d)
+
+# novo cadastro clinica ![image](https://github.com/user-attachments/assets/8c96dd3e-b9b4-4b43-b75e-a4b19ef95f9f)
+
+
 
 
 
@@ -74,5 +84,8 @@ só funciona por endpoint ( login = adm, senha = adm )
 ![image](https://github.com/user-attachments/assets/aee2421b-c002-4f2c-8b16-72979c0caabc)
 
 
-# Video Proposta Tecnologica.
+# Video Proposta Tecnologica ( sprint 2 ).
 https://youtu.be/xMdLX7Lzvy4
+
+# Video Proposta Tecnologica ( Sprint 3 ).
+https://dai.ly/k2VATbPxf5z50ZCHDxS

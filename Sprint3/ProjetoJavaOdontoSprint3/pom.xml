@@ -11,7 +11,7 @@
 	<groupId>br.com.fiap</groupId>
 	<artifactId>ProjetoJavaOdontoSprint3</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ProjetoJavaOdontoSprint3</name>
+	<name>odonto</name>
 	<description>Projeto Acessibilidade Sprint3</description>
 	<url/>
 	<licenses>
@@ -30,6 +30,10 @@
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -113,7 +117,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.example</groupId>
-			<artifactId>ProjetoJavaOdontoSrpint3</artifactId>
+			<artifactId>odonto</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 

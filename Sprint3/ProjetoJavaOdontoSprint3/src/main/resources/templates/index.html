@@ -210,6 +210,8 @@
         window.location.href = '/cadastroConsultorio';
     }
 </script>
+<form th:action="@{/greeting}" th:object="${greeting}" method="post">
+
 
 <div class="container">
 
@@ -228,6 +230,7 @@
     <p>Não tem uma conta? <a href="/cadastroConsultorio">Cadastro da Clínica</a></p>
     <p>Não tem uma conta? <a href="#">Cadastro de Paciente</a></p>
 </div>
+</form>
 <script src="script.js"></script>
 <script>
     function redirecionarParaNovaPagina() {

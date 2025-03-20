@@ -11,7 +11,8 @@ Responsável pelo back-end do sistema.
 
 
 # Prioridade executar o .sql antes de buildar o sistema
-![image](https://github.com/user-attachments/assets/102fe1be-62ef-4b70-b48e-dcfa4d87c868)
+![image](https://github.com/user-attachments/assets/3aa6482f-58f1-49ed-88ac-733d32d4b488)
+
 
 Alguns endpoints não pode estar funcionando, mas o código foi feito baseado em controller, repository, service e com endpoints corretos
 ![image](https://github.com/user-attachments/assets/82d0f2c0-8af0-45e7-a1a3-29dfec1f268f)
